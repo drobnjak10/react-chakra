@@ -1,5 +1,11 @@
 import {
-  Box, Heading, Tab, TabList, TabPanel, TabPanels, Tabs
+  Box,
+  Heading,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
 } from "@chakra-ui/react";
 import React from "react";
 import ChatBox from "./ChatBox";
@@ -13,12 +19,12 @@ const ChatList = () => {
       <Heading as="h4" size={"lg"} color="#fff">
         All Conversations
       </Heading>
-      <Tabs variant="soft-rounded" colorScheme="green" p="5">
-        <TabList>
-          <Tab>Tab 1</Tab>
-          <Tab>Tab 2</Tab>
-          <Tab>Tab 3</Tab>
-          <Tab>Tab 4</Tab>
+      <Tabs variant="soft-rounded" colorScheme="pink" p="5">
+        <TabList mx={"auto"} justifyContent="center">
+          <Tab style={{ color: "#fff" }}>Tab 1</Tab>
+          <Tab style={{ color: "#fff" }}>Tab 2</Tab>
+          <Tab style={{ color: "#fff" }}>Tab 3</Tab>
+          <Tab style={{ color: "#fff" }}>Tab 4</Tab>
         </TabList>
         <Box
           h={"50vh"}
@@ -37,7 +43,7 @@ const ChatList = () => {
         >
           <TabPanels>
             <TabPanel>
-              <ChatBox />
+              <ChatBox active />
               <ChatBox />
               <ChatBox />
               <ChatBox />

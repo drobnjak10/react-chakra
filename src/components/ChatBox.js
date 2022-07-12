@@ -1,12 +1,18 @@
-import {
-  Avatar, Box,
-  Flex, Heading, Tag, Text
-} from "@chakra-ui/react";
+import { Avatar, Box, Flex, Heading, Tag, Text } from "@chakra-ui/react";
 import React from "react";
 
-const ChatBox = () => {
+const ChatBox = ({ active }) => {
   return (
-    <Flex align="center" mb={"5"} width="100%" as={"a"} href="#">
+    <Flex
+      align="center"
+      mb={"1"}
+      width="100%"
+      as={"a"}
+      p="2"
+      href="#"
+      bg={active ? 'pink.100' : 'transparent'}
+      _active={{ background: "pink.100" }}
+    >
       <Box flex={1}>
         <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
       </Box>

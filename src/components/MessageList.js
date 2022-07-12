@@ -5,6 +5,7 @@ import {
     Text
 } from "@chakra-ui/react";
 import React from "react";
+import MessageBar from "./Message/MessageBar";
 import Reciever from "./Message/Reciever";
 import Sender from "./Message/Sender";
 import MessageHeader from "./MessageHeader";
@@ -53,15 +54,7 @@ const MessageList = () => {
         <Reciever />
         <Sender />
       </Box>
-      <Stack
-        mt='5'
-        direction={"row"}
-        spacing={3}
-        width="100%"
-      >
-        <Input variant="filled" placeholder="Filled" />
-        <Button colorScheme="blue">Send</Button>
-      </Stack>
+      <MessageBar />
     </Box>
   );
 };
