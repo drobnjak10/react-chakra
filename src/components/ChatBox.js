@@ -1,13 +1,22 @@
 import React from "react";
-import { Box, Flex, Avatar, Heading, Text, Tag } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Avatar,
+  Heading,
+  Text,
+  Tag,
+  LinkBox,
+  LinkOverlay,
+} from "@chakra-ui/react";
 
 const ChatBox = () => {
   return (
-    <Flex align="center" mb={"5"} width="100%">
+    <Flex align="center" mb={"5"} width="100%" as={"a"} href="#">
       <Box flex={1}>
         <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
       </Box>
-      <Box flex={5} ml="2">
+      <Box flex={5} marginRight="5" marginLeft={3} alignItems='center'>
         <Heading as="h4" size={"sm"}>
           Heading 1
         </Heading>
@@ -16,10 +25,13 @@ const ChatBox = () => {
         </Text>
       </Box>
       <Box flex={1} ml="auto">
-        <Text noOfLines={1} fontSize="sm">1 hour</Text>
+        <Text noOfLines={1} fontSize="sm">
+          1 hour ago
+        </Text>
         <Tag>Priority</Tag>
       </Box>
     </Flex>
+    // );
   );
 };
 
