@@ -2,14 +2,17 @@ import "./App.css";
 import { Box, Flex } from "@chakra-ui/react";
 import ChatList from "./components/ChatList";
 import MessageList from "./components/MessageList";
+import Tranasaction from "./components/Tranasaction";
 
 function App() {
   return (
-    <Flex align="center" justify="center" height={'95vh'} width="90%" mx={'auto'} bg="blue.100">
+    <Box w={'100%'} height='100vh' bg="blue.100">
+      <Flex align="center" justify="center" height={'100vh'} width="90%" mx={'auto'} gap='30px'>
       <ChatList />
       <MessageList />
-      <Box flex={1} bg='green'>3</Box>
+      <Tranasaction />
     </Flex>
+    </Box>
   );
 }
 

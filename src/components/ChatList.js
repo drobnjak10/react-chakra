@@ -16,10 +16,10 @@ const ChatList = () => {
       <Heading as="h5" size="sm">
         Conversations / All Conversations
       </Heading>
-      <Heading as="h4" size={"lg"} color="#fff">
+      <Heading as="h4" size={"md"} color="#fff">
         All Conversations
       </Heading>
-      <Tabs variant="soft-rounded" colorScheme="pink" p="5">
+      <Tabs variant="soft-rounded" colorScheme="pink" p="2">
         <TabList mx={"auto"} justifyContent="center">
           <Tab style={{ color: "#fff" }}>Tab 1</Tab>
           <Tab style={{ color: "#fff" }}>Tab 2</Tab>
