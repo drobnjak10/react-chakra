@@ -1,18 +1,13 @@
-import React from "react";
 import {
-  Box,
-  Flex,
-  Heading,
-  Tabs,
-  TabList,
-  Tag,
-  TabPanels,
-  TabPanel,
-  Text,
-  IconButton,
-  Avatar,
-  Image,
+    Box, Button, Flex,
+    Heading,
+    IconButton, Input, Stack, Tag,
+    Text
 } from "@chakra-ui/react";
+import React from "react";
+import Reciever from "./Message/Reciever";
+import Sender from "./Message/Sender";
+import MessageHeader from "./MessageHeader";
 
 const MessageList = () => {
   return (
@@ -38,32 +33,35 @@ const MessageList = () => {
           </Heading>
         </Flex>
       </Flex>
-
-      {/* Message Header */}
-      <Flex align="center" mb={"5"} width="100%" as={"a"} href="#" mt="3">
-        <Box flex={1}>
-          <Image
-            boxSize="60px"
-            objectFit="cover"
-            src="https://bit.ly/dan-abramov"
-            alt="Dan Abramov"
-          />
-        </Box>
-        <Box flex={5} marginRight="5" marginLeft={3} alignItems="center">
-          <Heading as="h4" size={"sm"}>
-            Heading 1
-          </Heading>
-          <Text noOfLines={1} fontSize="sm">
-            "The quick brown fox jumps over the lazy dog".
-          </Text>
-        </Box>
-        <Box flex={1} ml="auto">
-          <Text noOfLines={1} fontSize="sm">
-            1 hour ago
-          </Text>
-          <Tag>Priority</Tag>
-        </Box>
-      </Flex>
+      <MessageHeader />
+      <Box
+        height={"50vh"}
+        marginTop="20px"
+        sx={{
+          "&::-webkit-scrollbar": {
+            width: "10px",
+            borderRadius: "8px",
+            backgroundColor: `rgba(0, 0, 0, 0.05)`,
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: `rgba(255, 255, 255, 1)`,
+          },
+        }}
+        overflowY={"scroll"}
+      >
+        <Reciever />
+        <Reciever />
+        <Sender />
+      </Box>
+      <Stack
+        mt='5'
+        direction={"row"}
+        spacing={3}
+        width="100%"
+      >
+        <Input variant="filled" placeholder="Filled" />
+        <Button colorScheme="blue">Send</Button>
+      </Stack>
     </Box>
   );
 };

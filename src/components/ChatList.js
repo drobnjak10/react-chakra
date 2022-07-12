@@ -1,14 +1,7 @@
-import React from "react";
 import {
-  Box,
-  Flex,
-  Heading,
-  Tabs,
-  TabList,
-  Tab,
-  TabPanels,
-  TabPanel,
+  Box, Heading, Tab, TabList, TabPanel, TabPanels, Tabs
 } from "@chakra-ui/react";
+import React from "react";
 import ChatBox from "./ChatBox";
 
 const ChatList = () => {
