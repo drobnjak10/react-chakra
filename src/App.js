@@ -1,5 +1,6 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import "./App.css";
+import AddOrganization from "./components/AddOrganization";
 import OrganizationCard from "./components/OrganizationCard";
 
 function App() {
@@ -18,16 +19,18 @@ function App() {
         Select organization
       </Heading>
       <Flex
-        justify="center"
+        justifyContent="center"
         height={"100%"}
         width="90%"
         mx={"auto"}
         gap="30px"
+        flexWrap={"wrap"}
         flexDirection={{ lg: "row", md: "column", sm: "column" }}
       >
         <OrganizationCard />
         <OrganizationCard />
         <OrganizationCard />
+        <AddOrganization />
       </Flex>
     </Box>
   );
