@@ -12,7 +12,10 @@ import OrganizationStack from "./OrganizationStack";
 
 const OrganizationCard = () => {
   return (
-    <Box width={"25%"} bg="white" rounded={"lg"} height="90%" padding={"10px"}>
+<Box width={{ base: "25%", sm: '100%', md: '100%' }} bg="white" rounded={"lg"} height={{
+    base: '90vh',
+    md: 'auto'
+}} padding={"10px"}>
       <Heading textAlign={"center"} as="h6" fontSize={"22px"} padding={22}>
         MegaCrypto
       </Heading>
@@ -29,9 +32,9 @@ const OrganizationCard = () => {
       </Heading>
       <Flex direction={"column"} justifyContent='space-between'>
         <OrganizationStack />
-        <OrganizationStack button={"Open"} />
-        <OrganizationStack />
-        <OrganizationStack />
+        <OrganizationStack button={"Open"} icon='up'/>
+        <OrganizationStack icon='up' />
+        <OrganizationStack  icon='down' />
         <OrganizationStack />
       </Flex>
     </Box>
