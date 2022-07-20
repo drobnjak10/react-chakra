@@ -1,17 +1,23 @@
+import React from "react";
 import { isMobile } from "react-device-detect";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import ChatList from "./components/mobile/ChatList";
-import DeviceDetector from "./helpers/DeviceDetector";
-import Home from "./pages/Home";
+
+const LazyMobile = React.lazy(() => import("./pages/Mobile"));
+const LazyDesktop = React.lazy(() => import("./pages/Desktop"));
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={ isMobile ? <ChatList /> : <Home />} />
-      </Routes>
-    </BrowserRouter>
+    <React.Fragment>
+      {isMobile ? (
+        <React.Suspense fallback="Loading...">
+          <LazyMobile />
+        </React.Suspense>
+      ) : (
+        <React.Suspense fallback="Loading...">
+          <LazyDesktop />
+        </React.Suspense>
+      )}
+    </React.Fragment>
   );
 }
 
