@@ -1,38 +1,17 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { isMobile } from "react-device-detect";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import AddOrganization from "./components/AddOrganization";
-import OrganizationCard from "./components/OrganizationCard";
+import ChatList from "./components/mobile/ChatList";
+import DeviceDetector from "./helpers/DeviceDetector";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <Box
-      w={"100%"}
-      height={{
-        base: "100vh",
-        md: "auto",
-        sm: "auto",
-      }}
-      bg="blue.100"
-      paddingBottom="32"
-    >
-      <Heading w={"90%"} mx="auto">
-        Select organization
-      </Heading>
-      <Flex
-        justifyContent="center"
-        height={"100%"}
-        width="90%"
-        mx={"auto"}
-        gap="30px"
-        flexWrap={"wrap"}
-        flexDirection={{ lg: "row", md: "column", sm: "column" }}
-      >
-        <OrganizationCard />
-        <OrganizationCard />
-        <OrganizationCard />
-        <AddOrganization />
-      </Flex>
-    </Box>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ isMobile ? <ChatList /> : <Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

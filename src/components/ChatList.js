@@ -12,7 +12,7 @@ import ChatBox from "./ChatBox";
 
 const ChatList = () => {
   return (
-    <Box flex={1} bg="blue.100" height={"60vh"}>
+    <Box flex={'100%'} bg="blue.100" height={"60vh"} width={{ sm: '100%', md: '100%' }}>
       <Heading as="h5" size="sm">
         Conversations / All Conversations
       </Heading>

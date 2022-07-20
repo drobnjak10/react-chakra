@@ -1,14 +1,11 @@
 import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  HStack,
-  Stack,
-  Text,
+    Box,
+    Button,
+    Flex,
+    Heading,
+    HStack
 } from "@chakra-ui/react";
 import React from "react";
-import AddOrganization from "./AddOrganization";
 import OrganizationStack from "./OrganizationStack";
 
 const OrganizationCard = () => {
